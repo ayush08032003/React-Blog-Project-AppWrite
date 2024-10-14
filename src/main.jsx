@@ -5,15 +5,7 @@ import "./index.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { Provider } from "react-redux";
 import store from "./store/store.js";
-import {
-  Home,
-  Login,
-  Signup,
-  AllPosts,
-  AddPost,
-  EditPost,
-  Post,
-} from "./pages/index.js";
+import { Home, Login, Signup, AllPosts, AddPost, EditPost, Post } from "./pages/index.js";
 import Protected from "./components/AuthLayout.jsx"; // changed AuthLayout.jsx to Protected.jsx, although its doesnot do any harm or something if I choose not to do so.
 
 const router = createBrowserRouter([
