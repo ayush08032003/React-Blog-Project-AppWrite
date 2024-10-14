@@ -14,7 +14,7 @@ import {
   EditPost,
   Post,
 } from "./pages/index.js";
-import AuthLayout from "./components/AuthLayout.jsx";
+import Protected from "./components/AuthLayout.jsx"; // changed AuthLayout.jsx to Protected.jsx, although its doesnot do any harm or something if I choose not to do so.
 
 const router = createBrowserRouter([
   {
@@ -28,49 +28,49 @@ const router = createBrowserRouter([
       {
         path: "/login",
         element: (
-          <AuthLayout authentication={false}>
+          <Protected authentication={false}>
             <Login />
-          </AuthLayout>
+          </Protected>
         ),
       },
       {
         path: "/signup",
         element: (
-          <AuthLayout authentication={false}>
+          <Protected authentication={false}>
             <Signup />
-          </AuthLayout>
+          </Protected>
         ),
       },
       {
         path: "/all-posts",
         element: (
-          <AuthLayout authentication={true}>
+          <Protected authentication={true}>
             <AllPosts />
-          </AuthLayout>
+          </Protected>
         ),
       },
       {
         path: "/add-post",
         element: (
-          <AuthLayout authentication={true}>
+          <Protected authentication={true}>
             <AddPost />
-          </AuthLayout>
+          </Protected>
         ),
       },
       {
         path: "/edit-post/:slug", // this slug value will gives us the post id of which post needs to be edited.
         element: (
-          <AuthLayout authentication={true}>
+          <Protected authentication={true}>
             <EditPost />
-          </AuthLayout>
+          </Protected>
         ),
       },
       {
         path: "/post/:slug",
         element: (
-          <AuthLayout authentication={true}>
+          <Protected authentication={true}>
             <Post />
-          </AuthLayout>
+          </Protected>
         ),
       },
     ],
