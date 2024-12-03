@@ -20,7 +20,6 @@ A full-stack React Blog Application built using React, Redux for state managemen
   - [Step 3: Set Up Environment Variables](#step-3-set-up-environment-variables)
   - [Step 4: Run the Development Server](#step-4-run-the-development-server)
 - [Running the Application](#running-the-application)
-- [License](#license)
 
 ---
 
